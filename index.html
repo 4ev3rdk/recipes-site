@@ -9,7 +9,8 @@
     <script src="https://kit.fontawesome.com/25efb765a3.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+
+<body onclick="myFunction()">
     <div class="header">
         <nav class="nav">
             <ul>
@@ -20,11 +21,11 @@
 
             </ul>
         </nav>
-    </div>
 
-    <div class="search">
-        <input type="text" placeholder="search">
-        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class="search">
+            <input type="text" placeholder="search">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
     </div>
 
     <div class="container">
@@ -62,17 +63,35 @@
         </a>
         <a class="south" href="south.html"><img class="southimg" src="resources/south.png">South Indian
         </a>
-        <a class="north" href="rajasthani.html"><img class="rajasthaniimg" src="resources/gatte.jpeg">North Indian
+        <a class="north" href="rajasthani.html"><img class="rajasthaniimg" src="resources/gatte.jpeg">Rajasthani
 
         </a>
     </div>
+
+    <!--audio-->
+    <img id="audioTrigger" src="resources/yuyukoFumoCloseUp.jpg" alt="Play Sound" height="10px" width="10px">
+    <audio id="audioPlayer" src="resources/dosa.mp3"></audio>
+
     <div class="footer">
+
+        <p>&copy; 2025 Dev Recipes | Made with ❤️ for food lovers</p>
         <p class="project"> Recipee project by: dev</p>
 
         <img class="imed" src="resources/IMED.jpeg">
         <img class="bvdu" src="resources/bharati.vidyapeeth.jpeg">
 
+
+
+
     </div>
+
+
+
+    <script>document.getElementById("audioTrigger").addEventListener("click", function () {
+            document.getElementById("audioPlayer").play();
+        });
+    </script>
+
 </body>
 
 </html>

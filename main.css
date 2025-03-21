@@ -20,6 +20,9 @@ body {
     /* padding: 10px 40px; */
     width: 100%;
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(179, 158, 101);
 
 
 }
@@ -28,11 +31,12 @@ body {
     display: flex;
 
     justify-content: center;
-    justify-content: space-between;
-
+    /* justify-content: space-between; */
     /* background-color: rgb(180, 181, 176); */
-    padding: 10px 60px;
-    padding-left: 590px;
+    align-items: center;
+    padding: 10px 0px;
+    ;
+
 
 }
 
@@ -41,8 +45,9 @@ body {
     padding: 0px; */
     list-style-type: none;
     display: flex;
-    margin: 0;
-    padding: 0;
+    gap: 30 px;
+    color: white;
+
 
 }
 
@@ -52,6 +57,14 @@ body {
 
 .nav li a {
     font-size: 25px;
+    text-decoration: none;
+    color: white;
+
+}
+
+.nav li a:hover {
+    color: black;
+    transform: scale(1.1);
 }
 
 .search {
@@ -74,7 +87,6 @@ body {
 .container {
     margin: 0 auto;
     margin-top: 15px;
-    display: block;
     text-align: center;
 
 }
@@ -96,7 +108,7 @@ body {
 
 .mainimg {
     height: 250px;
-    /* height: 0vw; */
+    max-width: 100%;
     margin: 0 auto;
     display: block;
     margin-top: 30px;
@@ -132,6 +144,17 @@ body {
     justify-content: center;
     gap: 20px 80px;
     text-align: center;
+
+}
+
+.links a {
+    color: black;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: white;
+    transform: scale(1.1);
 }
 
 .footer {
@@ -140,9 +163,12 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    background-color: rgb(52, 35, 8);
+    background-color: rgb(112, 78, 24);
     padding: 60px;
     color: #fff;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 
 
 }
@@ -158,4 +184,72 @@ body {
     width: auto;
     /* opacity: 50%; */
 
+}
+
+
+/* shitpost */
+#shitpost {
+    display: none;
+    position: absolute;
+    width: 4em;
+    height: 1em;
+    pointer-events: auto;
+}
+
+#shitpost.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.gimmeFood {
+    position: relative;
+    color: white;
+    background: black;
+    top: 3.6em;
+    width: 15em;
+    opacity: 0;
+    text-align: center;
+    pointer-events: none;
+
+}
+
+#yuyuko {
+    position: absolute;
+    width: 5em;
+    overflow: hidden;
+    top: 0;
+}
+
+#shitpost:hover>.gimmeFood {
+    transition: 130s linear;
+    top: 14.5em;
+    font-size: 10em;
+    animation: appear 4s 1s forwards;
+}
+
+#yuyuko:hover {
+    transition: 130s linear;
+    width: 190em;
+}
+
+#yuyukoTitle {
+    position: absolute;
+    width: 100%;
+    font-family: "Norse";
+    letter-spacing: 0.04em;
+    font-size: 5vw;
+    color: rgb(236, 218, 139);
+    margin: 0.3em 0 0 6em;
+    width: 6em;
+    text-align: center;
+    left: 1em;
+    top: 0.05em;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#shitpost:hover>#yuyukoTitle {
+    opacity: 1;
+    transition: 2s;
+    background: rgb(182, 159, 97);
 }
