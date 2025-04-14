@@ -1,0 +1,89 @@
+* {
+    font-family: "Akaya Telivigala";
+    box-sizing: border-box;
+    /*padding and border are included inside the width and height.*/
+}
+
+body {
+    /* background:
+        linear-gradient(180deg,
+            #0d1120,
+            #0d1125);
+    color: #c9d1d9; */
+    background: linear-gradient(180deg, rgb(182, 159, 97), rgb(128, 89, 24));
+
+    text-align: center;
+}
+
+img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border: 2px solid #c9d1d9;
+    padding: 7px;
+}
+
+.all {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45em;
+    /* max-width:; */
+    /* background-color: #14170d; */
+    background: linear-gradient(180deg, rgb(149, 121, 39), rgb(115, 79, 15));
+
+    border-radius: 15px;
+    border: 2px solid #c9d1d9;
+    padding: 15px;
+}
+
+.ingredients li {
+    text-align: left;
+}
+
+.steps li {
+    text-align: left;
+}
+
+.bold {
+    font-weight: bold;
+    float: left;
+    padding-left: 180px;
+}
+
+.nutrients {
+    text-align: center;
+}
+
+.bold-right {
+    font-weight: bold;
+}
+
+.homee {
+    text-decoration: none;
+
+    background-color: rgb(115, 79, 15);
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 15px;
+    font-size: 1.3rem;
+    border-right: 1px solid #c9d1d9;
+    border-bottom: 1px solid #c9d1d9;
+}
+
+.nextt {
+    text-decoration: none;
+
+    background-color: rgb(115, 79, 15);
+    color: black;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px;
+    font-size: 1.3rem;
+    border-left: 1px solid #c9d1d9;
+    border-bottom: 1px solid #c9d1d9;
+}
