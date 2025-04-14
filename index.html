@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Recipes</title>
     <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia|Akaya Telivigala">
+
     <script src="https://kit.fontawesome.com/25efb765a3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -16,16 +18,21 @@
             <ul>
                 <li><a href="#"> Home </a> </li>
                 <li> <a href="#recipe1">Recipes</a> </li>
-                <li><a href="#"> About Us </a> </li>
-                <li><a href="#"> Contact Us </a> </li>
+                <li><a href="about.us.html"> About Us </a> </li>
+                <li><a href="contact.us.html"> Contact Us </a> </li>
 
             </ul>
         </nav>
 
         <div class="search">
-            <input type="text" placeholder="search">
-            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" id="searchInput" placeholder="Search....">
+            <button type="button" onclick="handleSearch()"><i class="fa-solid fa-magnifying-glass"></i> </button>
         </div>
+
+
+    </div>
+
+
     </div>
 
     <div class="container">
@@ -80,9 +87,6 @@
         <img class="imed" src="resources/IMED.jpeg">
         <img class="bvdu" src="resources/bharati.vidyapeeth.jpeg">
 
-
-
-
     </div>
 
 
@@ -90,6 +94,28 @@
     <script>document.getElementById("audioTrigger").addEventListener("click", function () {
             document.getElementById("audioPlayer").play();
         });
+
+        function handleSearch() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+
+            const recipes = {
+                "palak paneer": "dinner.html",
+                "chana masala": "lunch.html",
+                "onion pakora": "snack.html",
+                "idli": "breakfast.html",
+                "paneer butter masala": "north.html",
+                "masala dosa": "south.html",
+                "gatte": "rajasthani.html"
+            };
+
+            if (recipes[input]) {
+                window.location.href = recipes[input];
+            } else {
+                alert("Recipe not found!");
+            }
+        }
+    </script>
+
     </script>
 
 </body>
