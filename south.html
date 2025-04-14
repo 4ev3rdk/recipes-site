@@ -99,7 +99,19 @@
                 <span class="bold-right">250mg</span>
             </p>
         </div>
+
     </div>
+    <img id="audioTrigger" src="resources/yuyukoFumoCloseUp.jpg" alt="Play Sound"
+        style="height:20px !important; width:20px !important; border-radius:0 !important; border:none !important;">
+
+    <audio id="audioPlayer" src="resources/dosa.mp3"></audio>
+
+    <script>
+
+        document.getElementById("audioTrigger").addEventListener("click", function () {
+            document.getElementById("audioPlayer").play();
+        });
+    </script>
 </body>
 
 </html>
