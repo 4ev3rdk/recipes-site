@@ -7,6 +7,8 @@
     <title>Contact Us - Devs Recipes</title>
     <link rel="stylesheet" href="contact.us.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia|Akaya+Telivigala">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -28,7 +30,8 @@
 
         <form>
             <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
+            <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" title="Please enter valid Name"
+                required><br><br>
 
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" required><br><br>
@@ -43,11 +46,19 @@
 
     <div class="footer">
 
-        <p>&copy; 2025 Dev Recipes | Made with ❤️ for food lovers</p>
+
+        <p>Connect with us</p>
+        <div class=socials>
+            <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com" target="blank"> <i class="fa-brands fa-x-twitter"></i> </a>
+            <a href="https://instagram.com/4ev3rdk" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank"> <i class="fa-brands fa-youtube"></i> </a>
+        </div>
+
         <p class="project"> Recipee project by: dev</p>
 
         <img class="imed" src="resources/IMED.jpeg">
-        <img class="bvdu" src="resources/bharati.vidyapeeth.jpeg">
+        <p>&copy; 2025 Dev Recipes | Made with ❤️ for food lovers. All rights reserved.</p>
 
     </div>
 </body>

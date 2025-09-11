@@ -116,3 +116,14 @@ body {
     /* opacity: 50%; */
 
 }
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-size: 24px;
+}
+
+.socials a:hover {
+    transform: scale(1.2);
+}

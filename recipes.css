@@ -13,6 +13,7 @@ body {
     background: linear-gradient(180deg, rgb(182, 159, 97), rgb(128, 89, 24));
 
     text-align: center;
+    font-size: 18px;
 }
 
 img {
@@ -36,6 +37,7 @@ img {
     border-radius: 15px;
     border: 2px solid #c9d1d9;
     padding: 15px;
+    margin-bottom: 50px;
 }
 
 .ingredients li {
@@ -86,4 +88,63 @@ img {
     font-size: 1.3rem;
     border-left: 1px solid #c9d1d9;
     border-bottom: 1px solid #c9d1d9;
+}
+
+form {
+
+
+    background-color: rgb(149, 121, 39);
+    left: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    margin-left: 36%;
+}
+
+form h3 {
+    margin-bottom: 15px;
+    color: #e67e22;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+    color: black;
+    background-color: rgb(149, 121, 39);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    margin-top: 15px;
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #d35400;
 }

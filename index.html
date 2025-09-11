@@ -14,7 +14,9 @@
 
 <body onclick="myFunction()">
     <div class="header">
+
         <nav class="nav">
+
             <ul>
                 <li><a href="#"> Home </a> </li>
                 <li> <a href="#recipe1">Recipes</a> </li>
@@ -27,6 +29,7 @@
         <div class="search">
             <input type="text" id="searchInput" placeholder="Search....">
             <button type="button" onclick="handleSearch()"><i class="fa-solid fa-magnifying-glass"></i> </button>
+            <div class="search-suggestions" id="suggestions"> </div>
         </div>
 
 
@@ -79,15 +82,21 @@
 
     <div class="footer">
 
-        <p>&copy; 2025 Dev Recipes | Made with ❤️ for food lovers</p>
-        <p class="project"> Recipee project by: dev</p>
+        <p class=view> Page Visits:<span id="visit" </p>
+                <p>Connect with us</p>
+                <div class=socials>
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com" target="blank"> <i class="fa-brands fa-x-twitter"></i> </a>
+                    <a href="https://instagram.com/4ev3rdk" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank"> <i class="fa-brands fa-youtube"></i> </a>
+                </div>
 
-        <img class="imed" src="resources/IMED.jpeg">
-        <img class="bvdu" src="resources/bharati.vidyapeeth.jpeg">
+                <p class="project"> Recipee project by: dev</p>
+
+                <img class="imed" src="resources/IMED.jpeg">
+                <p>&copy; 2025 Dev Recipes | Made with ❤️ for food lovers. All rights reserved.</p>
 
     </div>
-
-
 
     <script>
         function handleSearch() {
@@ -111,6 +120,72 @@
         }
     </script>
 
+    <!-- search suggestions -->
+    <script>
+        const recipeList = [
+            "palak paneer",
+            "chana masala",
+            "onion pakora",
+            "idli",
+            "paneer butter masala",
+            "masala dosa",
+            "gatte"
+        ];
+
+        const searchInput = document.getElementById("searchInput");
+        const suggestionsDiv = document.getElementById("suggestions");
+
+        searchInput.addEventListener("input", function () {
+            const input = searchInput.value.toLowerCase();
+            suggestionsDiv.innerHTML = "";
+
+            if (input === "") return;
+
+            const filtered = recipeList.filter(recipe =>
+                recipe.includes(input)
+            );
+
+            filtered.forEach(recipe => {
+                const div = document.createElement("div");
+                div.textContent = recipe;
+                div.classList.add("suggestion-item");
+
+                div.addEventListener("click", () => {
+                    searchInput.value = recipe;
+                    suggestionsDiv.innerHTML = "";
+                });
+
+                suggestionsDiv.appendChild(div);
+            });
+        });
+
+        // Optional: Hide suggestions when clicking outside
+        document.addEventListener("click", function (e) {
+            if (!e.target.closest(".search")) {
+                suggestionsDiv.innerHTML = "";
+            }
+        });
+    </script>
+
+
+    <!--page visit count-->
+    <script>
+        // Get the count from localStorage
+        let count = localStorage.getItem('page_visit_count');
+
+        // If not found, set it to 0
+        if (count === null) {
+            count = 0;
+        }
+
+        // Increase count
+        count++;
+
+        // Save back to localStorage
+        localStorage.setItem('page_visit_count', count);
+
+        // Show on page
+        document.getElementById('visit').innerText = count;
     </script>
 
 </body>

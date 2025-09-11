@@ -310,3 +310,17 @@ body {
 .create-account p a:hover {
     text-decoration: underline;
 }
+
+/* search suggestion */
+.search {
+    position: relative;
+}
+
+.search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    margin-top: 4px;
+}
